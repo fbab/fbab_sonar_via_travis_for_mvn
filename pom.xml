@@ -21,4 +21,35 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <executions>
+          <execution>
+            <id>enforce-files-exist</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireFilesExist>
+                  <level>WARN</level> <!-- source : http://maven.apache.org/enforcer/maven-enforcer-plugin/usage.html -->
+                  <files>
+                   <file>${project.basedir}/pom.xml</file>
+                   <file>${project.basedir}/docs/cdc.md</file>
+                   <!-- <file>${project.build.outputDirectory}/foo2.txt</file> -->
+                  </files>
+                </requireFilesExist>
+              </rules>
+              <fail>true</fail>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    
+    
 </project>
