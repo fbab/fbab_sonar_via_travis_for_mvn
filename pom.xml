@@ -7,6 +7,8 @@
     <name>... Java Maven-based project analyzed on SonarCloud using Travis-CI.org pour compiler ...</name>
     <url>https://github.com/SonarSource/sq-com_example_java-maven-travis</url>
 
+    
+ 
     <scm>
         <connection>scm:git:git@github.com:SonarSource/sq-com_example_java-maven-travis.git</connection>
         <developerConnection>scm:git:git@github.com:SonarSource/sq-com_example_java-maven-travis.git</developerConnection>
