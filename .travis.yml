@@ -16,8 +16,15 @@ jdk:
   - oraclejdk8
 
 script:
-  - mvn site
-  # if language: java by default mvn test is launched (https://blog.travis-ci.com/2017-03-30-deploy-maven-travis-ci-packagecloud/)
+  # to get credentials to upload generated site on gh-pages
+  # sources
+  #  - https://github.com/github/maven-plugins
+  #  - https://github.com/wisdom-framework/wisdom-ractivejs/blob/master/.travis.yml
+  - echo "<settings><servers><server><id>github</id><username>\${env.GITHUB_USER}</username><password>\${env.GITHUB_PASS}</password></server></servers></settings>"
+  > ~/settings.xml
+  # to generate the site
+  - mvn site --settings ~/settings.xml
+  # if language: java by default 'mvn test -B' is launched (https://blog.travis-ci.com/2017-03-30-deploy-maven-travis-ci-packagecloud/)
   # JaCoCo is used to have code coverage, the agent has to be activated
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -l output.log
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar > target/output.log
