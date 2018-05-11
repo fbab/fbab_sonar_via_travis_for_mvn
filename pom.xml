@@ -68,7 +68,7 @@
           </goals>
           <phase>site</phase>
            <configuration>
-                <repositoryName>fbab_sonar_via_travis_for_mvn<repositoryName>
+                <repositoryName>fbab_sonar_via_travis_for_mvn</repositoryName>
                 <repositoryOwner>fbab</repositoryOwner>
                 <!-- indication from : https://github.github.com/maven-plugins/site-plugin/authentication.html -->
                 <server>github</server>
