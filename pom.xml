@@ -67,6 +67,12 @@
             <goal>site</goal>
           </goals>
           <phase>site</phase>
+                <!-- indication from : https://github.github.com/maven-plugins/site-plugin/authentication.html -->
+                <server>github</server>
+                <!-- The commit message -->
+                <message>Building site for my project</message>
+                <!-- The location where the site is uploaded -->
+                <path>${site.path}</path>
         </execution>
       </executions>
     </plugin>
