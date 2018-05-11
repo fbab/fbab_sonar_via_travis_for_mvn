@@ -29,8 +29,8 @@ script:
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -l output.log
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar > target/output.log
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar > output.log
-  #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
-  # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN}
+  # OK - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  # OK - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN}
 
 cache:
   directories:
