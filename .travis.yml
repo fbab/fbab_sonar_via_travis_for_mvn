@@ -1,4 +1,4 @@
-language: java
+# language: java
 sudo: false
 install: true
 
@@ -11,8 +11,8 @@ install: true
     # token:
     #  secure: "jCe1bGGbx0kwEDy9PDcXBlX5YAkjbEX2moL93L8U+UwkmDRbilsSQQYKQtzgUJ4drUU8g0BJywndUBcR0DSF1dW9YjPGgazCrCbiSimXy3IFMwLI5kU2BnJXTHzcQDJDxWr4P5UttL1KsXi72dRTmeTa9XvXckTCkggAPsprTTA/aurYBuh5C8JbK3WKLwctEmC8RcYLg92cK9H09493h+Txk/jmRoS9wisXwPEbJu5+XspUOgBfrfGYMhKs+cJfaIJs7nRdb7nu65opb+SfgiFurYpKKQ1VJuJp9VAHlQ3Uu6XxItDq4Q0wSHI9an5QjzFuQNxsBORTvB6R99PZlgcAtV6jWRRUhn7QKh+7ibviBcKBCwUw+1j57cxIPXEu5CaG9KyCZQSzLpFCx7zk2mKsPatnHc8ucaDCxBRJnkT9ZfVg5V8ac4wqwqfzmoiNUpHQZ1V0pWHdH9iPChMW1+cYmCmxOMDscE5vx4E4aTKySFgfsZQRwDhMm1zm7WPiUNPy2rez5GAhNLKIGhBV3+6DFYdaitrNDet68uvthaRbrzOrhJ8WUAvW2qCnqPJ3FUecOoJCrTxpthIBjsA9EXFaly70DeINdTY6TM5Jyv8OzLTG3xYPlL6OgFoFPKG90pQLVvAgI4pSccERFOqcf57wuxymQWy2aHLjLMyeX+s="
 
-jdk:
-  - oraclejdk8
+# jdk:
+#  - oraclejdk8
   
 node_js:
   - "node"
@@ -29,7 +29,7 @@ before_script:
   # sources
   #  - https://github.com/github/maven-plugins
   #  - https://github.com/wisdom-framework/wisdom-ractivejs/blob/master/.travis.yml
-  - echo "<settings><servers><server><id>github</id><username>\${env.GITHUB_USER}</username><password>\${env.GITHUB_PASS}</password></server></servers></settings>" > ~/settings.xml
+  # - echo "<settings><servers><server><id>github</id><username>\${env.GITHUB_USER}</username><password>\${env.GITHUB_PASS}</password></server></servers></settings>" > ~/settings.xml
   # opt on mvn command line in script could fails ?! 
   # TO BE CHECKED : - echo "MAVEN_OPTS='-Dorg.apache.maven.user-settings=~/settings.xml'" > ~/.mavenrc
 
@@ -38,7 +38,7 @@ script:
   - textlint --rule no-todo --rule very-nice-rule "docs/**"
   # to generate the site with the settings above
   # OK - mvn site
-  - mvn -s ~/settings.xml site
+  # - mvn -s ~/settings.xml site
   # if language: java by default 'mvn test -B' is launched (https://blog.travis-ci.com/2017-03-30-deploy-maven-travis-ci-packagecloud/)
   # JaCoCo is used to have code coverage, the agent has to be activated
   # KO - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -l output.log
