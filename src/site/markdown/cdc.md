@@ -1,3 +1,4 @@
 # Cahier des charges
 
-#sous - titre
+## sous - titre
+Le système a pour ambition de formaliser la production de documentation.
