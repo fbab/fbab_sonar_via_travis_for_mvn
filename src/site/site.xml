@@ -2,7 +2,7 @@
   <body>
     <menu name="Analyse">
       <item name="Cahier des charges" href="cdc.html" />
-      <item name="Diagramme de cas d'utilisation" href="images/component_diagram.png" />
+      <item name="Diagramme de cas d'utilisation" href="images/components.png" />
       <item name="FAQ" href="faq.html" />
     </menu>
     <menu name="Conception">
