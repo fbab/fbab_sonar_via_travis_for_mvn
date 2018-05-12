@@ -89,7 +89,7 @@
         				<sourceFiles>
           					<directory>${basedir}</directory>
           					<includes>
-            						<include>src/plantuml/**/*.txt</include>
+            						<include>src/site/plantuml/**/*.txt</include>
             					</includes>
         				</sourceFiles>
 					<outputDirectory>${basedir}/src/site/resources/images</outputDirectory>
