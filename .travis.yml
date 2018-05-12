@@ -44,6 +44,7 @@ before_script:
 
 script:
   # TO DO - gulp
+  - mkdir ~/src/site/apt
   - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/src/site/apt/textlint.apt
   - cat ~/src/site/apt/textlint.log
   # to generate the site with the settings above
