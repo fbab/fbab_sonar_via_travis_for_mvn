@@ -1,7 +1,7 @@
 <project>
   <body>
     <menu name="Overview">
-      <item name="Foo" href="foo.html" />
+      <item name="Cahier des charges" href="cdc.html" />
       <item name="FAQ" href="faq.html" />
     </menu>
   </body>
