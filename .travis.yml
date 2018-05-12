@@ -43,12 +43,13 @@ before_script:
   # TO BE CHECKED : - echo "MAVEN_OPTS='-Dorg.apache.maven.user-settings=~/settings.xml'" > ~/.mavenrc
 
 script:
-  # pour charger les fichiers depuis github
+  - mkdir $TRAVIS_BUILD_DIR/src/site/apt
+  # pour valider repertoires et fichiers
   - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt 
   - mvn validate -q >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   - echo "+---------------------" >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   # TO DO - gulp
-  - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
+  # pour valider contenu de la documentation
   # - echo "```"
   # - echo "\`\`\`" > $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
   - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
