@@ -3,6 +3,11 @@
     <menu name="Overview">
       <item name="Cahier des charges" href="cdc.html" />
       <item name="FAQ" href="faq.html" />
+      <item name="FAQ" href="faq.html" />
     </menu>
+    <menu name="Audit">
+      <item name="Avancement documentation" href="textlint.html" />
+    </menu>
+
   </body>
 </project>
