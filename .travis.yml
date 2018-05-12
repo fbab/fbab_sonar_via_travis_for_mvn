@@ -44,7 +44,7 @@ before_script:
 
 script:
   # pour charger les fichiers depuis github
-  - mvn validate
+  - mvn validate -q
   # TO DO - gulp
   - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
   # - echo "```"
