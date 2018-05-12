@@ -19,7 +19,8 @@ node_js:
 
 before_script:
   # - npm install -g gulp-cli
-  - echo $TRAVIS_JOB_ID
+  # https://github.com/travis-ci/travis-ci/issues/8376 : echo env var.
+  - echo "TRAVIS_JOB_ID=$TRAVIS_JOB_ID"
   - npm install textlint --global
   - npm install --global textlint-rule-no-todo
   - npm install --global textlint-rule-no-dead-link
@@ -40,6 +41,7 @@ before_script:
 script:
   # TO DO - gulp
   - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/textlint.log
+  - cat ~/textlint.log
   # to generate the site with the settings above
   # OK - mvn site
   # - mvn -s ~/settings.xml site
