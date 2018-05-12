@@ -7,6 +7,7 @@
     </menu>
     <menu name="Audit">
       <item name="Avancement documentation" href="textlint.html" />
+      <item name="Journal Build Automation Tool" href="mvnvalidate.html" />
       <item name="Journal CI" href="travislog.html" />
     </menu>
 
