@@ -24,7 +24,7 @@ before_script:
   # - echo "TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR"
   # le log est accessible à l'URL suivante : https://api.travis-ci.org/v3/job/$TRAVIS_JOB_ID/log.txt
   - set | grep TRAVIS_JOB_ID
-  # - mkdir ~/src/site/apt
+  # KO - mkdir ~/src/site/apt
   - npm install textlint --global
   - npm install --global textlint-rule-no-todo
   - npm install --global textlint-rule-no-dead-link
@@ -44,8 +44,8 @@ before_script:
 
 script:
   # TO DO - gulp
-  - mkdir ~/src/site/apt
-  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/src/site/apt/textlint.apt
+  - ls -la ~/src/site/markdown
+  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/src/site/markdown/textlint.apt
   - cat ~/src/site/apt/textlint.log
   # to generate the site with the settings above
   # OK - mvn site
