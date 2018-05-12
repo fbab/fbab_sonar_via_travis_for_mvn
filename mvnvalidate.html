@@ -75,9 +75,73 @@
     <div id="bodyColumn">
       <div id="contentBox">
         <div class="source">
-<pre>[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M1:enforce (enforce-files-exist) on project fbab_hachathon2018: Some Enforcer rules have failed. Look above for specific messages explaining why the rule failed. -&gt; [Help 1]
+<pre>[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ... MiniP Maven-based documentation generation avec Travis-CI.org ... 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-files-exist) @ fbab_hachathon2018 ---
+[WARNING] Rule 0: org.apache.maven.plugins.enforcer.RequireFilesExist failed with message:
+Some required files are missing:
+/home/travis/build/fbab/fbab_sonar_via_travis_for_mvn/docs/cdc.md
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.868 s
+[INFO] Finished at: 2018-05-12T02:49:40Z
+[INFO] Final Memory: 17M/491M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M1:enforce (enforce-files-exist) on project fbab_hachathon2018: Some Enforcer rules have failed. Look above for specific messages explaining why the rule failed. -&gt; [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M1:enforce (enforce-files-exist) on project fbab_hachathon2018: Some Enforcer rules have failed. Look above for specific messages explaining why the rule failed.
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:51)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:309)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:194)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:107)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:955)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:290)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:194)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Some Enforcer rules have failed. Look above for specific messages explaining why the rule failed.
+    at org.apache.maven.plugins.enforcer.EnforceMojo.execute (EnforceMojo.java:243)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:134)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:208)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:51)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:309)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:194)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:107)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:955)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:290)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:194)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
 [ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
