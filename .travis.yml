@@ -14,6 +14,16 @@ install: true
 
 jdk:
   - oraclejdk8
+  
+node_js:
+  - "node"
+
+before_script:
+  - npm install -g gulp-cli
+  - npm install textlint --global
+
+install:
+  # BY DEFAULT : - npm install
 
 before_script:
   # to get credentials to upload generated site on gh-pages
@@ -25,6 +35,8 @@ before_script:
   # TO BE CHECKED : - echo "MAVEN_OPTS='-Dorg.apache.maven.user-settings=~/settings.xml'" > ~/.mavenrc
 
 script:
+  # TO DO - gulp
+  - textlint --rule no-todo --rule very-nice-rule "docs/**"
   # to generate the site with the settings above
   # OK - mvn site
   - mvn -s ~/settings.xml site
