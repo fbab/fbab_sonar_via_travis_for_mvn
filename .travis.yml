@@ -37,7 +37,7 @@ before_script:
 
 script:
   # TO DO - gulp
-  - textlint --rule no-todo --rule no-dead-link "docs/**"
+  - textlint --rule no-todo --rule no-dead-link "src/site/markdown/**"
   # to generate the site with the settings above
   # OK - mvn site
   # - mvn -s ~/settings.xml site
