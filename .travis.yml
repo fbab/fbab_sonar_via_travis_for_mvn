@@ -44,7 +44,9 @@ before_script:
 
 script:
   # pour charger les fichiers depuis github
-  - mvn validate -q
+  - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt 
+  - mvn validate -q >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
+  - echo "+---------------------" >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   # TO DO - gulp
   - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
   # - echo "```"
