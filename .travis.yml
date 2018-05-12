@@ -18,7 +18,7 @@ node_js:
   - "node"
 
 before_script:
-  - npm install -g gulp-cli
+  # - npm install -g gulp-cli
   - npm install textlint --global
 
 # install:
