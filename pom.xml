@@ -80,7 +80,29 @@
         </execution>
       </executions>
     </plugin>
-        
+
+			<plugin>
+				<groupId>com.github.jeluard</groupId>
+      				<artifactId>plantuml-maven-plugin</artifactId>
+      				<version>7941</version>
+      				<configuration>
+        				<sourceFiles>
+          					<directory>${basedir}</directory>
+          					<includes>
+            						<include>src/plantuml/**/*.txt</include>
+            					</includes>
+        				</sourceFiles>
+					<outputDirectory>${basedir}/src/site/resources/images</outputDirectory>
+      				</configuration>
+				<executions>
+					<execution>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+    		</plugin>
     </plugins>
     
   </build>  
