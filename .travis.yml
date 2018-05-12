@@ -20,6 +20,7 @@ node_js:
 before_script:
   # - npm install -g gulp-cli
   - npm install textlint --global
+  - npm install --global textlint-rule-no-todo
 
 # install:
   # BY DEFAULT : - npm install
