@@ -46,7 +46,7 @@ script:
   - mkdir $TRAVIS_BUILD_DIR/src/site/apt
   # pour valider repertoires et fichiers
   - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt 
-  - mvn validate -q >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
+  - mvn validate -e >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   - echo "+---------------------" >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   # TO DO - gulp
   # pour valider contenu de la documentation
