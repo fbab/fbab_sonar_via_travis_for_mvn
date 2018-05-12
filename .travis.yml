@@ -24,7 +24,7 @@ before_script:
   # - echo "TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR"
   # le log est accessible à l'URL suivante : https://api.travis-ci.org/v3/job/$TRAVIS_JOB_ID/log.txt
   - set | grep TRAVIS_JOB_ID
-  - mkdir ~/src/site/apt
+  # - mkdir ~/src/site/apt
   - npm install textlint --global
   - npm install --global textlint-rule-no-todo
   - npm install --global textlint-rule-no-dead-link
