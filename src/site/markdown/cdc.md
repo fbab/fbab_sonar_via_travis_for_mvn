@@ -3,7 +3,9 @@
 ## sous - titre
 Le système a pour ambition de formaliser la production de documentation.
 
-## cas d'utilisation
+## Cas d'utilisation
+Diagramme de cas d'utilisation
+![Diagramme de cas d'utilisation]images/usecases.png
 
-## contraintes fonctionnelles
+## Contraintes fonctionnelles
 TODO: ajouter une contrainte
