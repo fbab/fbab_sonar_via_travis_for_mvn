@@ -21,6 +21,7 @@ before_script:
   # - npm install -g gulp-cli
   # https://github.com/travis-ci/travis-ci/issues/8376 : echo env var.
   - echo "TRAVIS_JOB_ID=$TRAVIS_JOB_ID"
+  - echo "TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR"
   - set | grep TRAVIS
   - npm install textlint --global
   - npm install --global textlint-rule-no-todo
