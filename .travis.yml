@@ -48,6 +48,7 @@ script:
   - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt 
   - mvn validate -e >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   - echo "+---------------------" >> $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
+  - cat $TRAVIS_BUILD_DIR/src/site/apt/mvnvalidate.apt
   # TO DO - gulp
   # pour valider contenu de la documentation
   # - echo "```"
@@ -56,6 +57,7 @@ script:
   - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" >> $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
   # - echo "\`\`\`" >> $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
   - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
+  - echo $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
   - echo "[TRAVIS JOB LOG"$TRAVIS_JOB_ID"](https://api.travis-ci.org/v3/job/"$TRAVIS_JOB_ID"/log.txt)"
   - echo "[TRAVIS JOB LOG"$TRAVIS_JOB_ID"](https://api.travis-ci.org/v3/job/"$TRAVIS_JOB_ID"/log.txt)" > $TRAVIS_BUILD_DIR/src/site/markdown/travislog.md
   # to generate the site with the settings above
