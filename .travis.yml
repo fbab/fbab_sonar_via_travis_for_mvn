@@ -21,7 +21,7 @@ before_script:
   # - npm install -g gulp-cli
   - npm install textlint --global
   - npm install --global textlint-rule-no-todo
-  - npm install --global textlint-rule-very-nice-rule
+  - npm install --global textlint-rule-no-dead-link
 
 # install:
   # BY DEFAULT : - npm install
@@ -37,7 +37,7 @@ before_script:
 
 script:
   # TO DO - gulp
-  - textlint --rule no-todo --rule very-nice-rule "docs/**"
+  - textlint --rule no-todo --rule no-dead-link "docs/**"
   # to generate the site with the settings above
   # OK - mvn site
   # - mvn -s ~/settings.xml site
