@@ -48,7 +48,7 @@ script:
   # TO DO - gulp
   - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
   - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
-  - cat $TRAVIS_BUILD_DIR/src/site/apt/textlint.md
+  - cat $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
   # to generate the site with the settings above
   # OK - mvn site
   - mvn -s ~/settings.xml site
