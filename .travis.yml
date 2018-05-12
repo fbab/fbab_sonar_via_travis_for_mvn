@@ -47,12 +47,14 @@ script:
   - mvn validate
   # TO DO - gulp
   - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
-  - echo "```"
-  - echo "\`\`\`" > $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
-  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" >> $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
-  - echo "\`\`\`" >> $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
-  - echo "[$"TRAVIS_JOB_ID"]("$TRAVIS_JOB_ID")" 
-  - echo "[TRAVIS JOB LOG"$TRAVIS_JOB_ID"](https://api.travis-ci.org/v3/job/"$TRAVIS_JOB_ID")" >> $TRAVIS_BUILD_DIR/src/site/markdown/travislog.md
+  # - echo "```"
+  # - echo "\`\`\`" > $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
+  - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
+  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" >> $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
+  # - echo "\`\`\`" >> $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
+  - echo "+---------------------" > $TRAVIS_BUILD_DIR/src/site/apt/textlint.apt
+  - echo "[TRAVIS JOB LOG"$TRAVIS_JOB_ID"](https://api.travis-ci.org/v3/job/"$TRAVIS_JOB_ID"/log.txt)"
+  - echo "[TRAVIS JOB LOG"$TRAVIS_JOB_ID"](https://api.travis-ci.org/v3/job/"$TRAVIS_JOB_ID"/log.txt)" > $TRAVIS_BUILD_DIR/src/site/markdown/travislog.md
   # to generate the site with the settings above
   # OK - mvn site
   - mvn -s ~/settings.xml site
