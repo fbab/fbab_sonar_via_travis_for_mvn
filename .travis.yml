@@ -24,7 +24,7 @@ before_script:
 # install:
   # BY DEFAULT : - npm install
 
-before_script:
+# before_script:
   # to get credentials to upload generated site on gh-pages
   # sources
   #  - https://github.com/github/maven-plugins
