@@ -46,9 +46,9 @@ script:
   # pour charger les fichiers depuis github
   - mvn validate
   # TO DO - gulp
-  - ls -la ~/src/site/markdown
-  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/src/site/markdown/textlint.md
-  - cat ~/src/site/apt/textlint.md
+  - ls -la $TRAVIS_BUILD_DIR/src/site/markdown
+  - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > $TRAVIS_BUILD_DIR/src/site/markdown/textlint.md
+  - cat $TRAVIS_BUILD_DIR/src/site/apt/textlint.md
   # to generate the site with the settings above
   # OK - mvn site
   - mvn -s ~/settings.xml site
