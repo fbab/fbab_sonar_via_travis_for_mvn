@@ -43,6 +43,8 @@ before_script:
   # TO BE CHECKED : - echo "MAVEN_OPTS='-Dorg.apache.maven.user-settings=~/settings.xml'" > ~/.mavenrc
 
 script:
+  # pour charger les fichiers depuis github
+  - mvn validate
   # TO DO - gulp
   - ls -la ~/src/site/markdown
   - textlint --rule no-todo --rule no-dead-link --rule no-empty-section "src/site/markdown/**" > ~/src/site/markdown/textlint.apt
